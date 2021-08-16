@@ -73,7 +73,7 @@ export default {
         const { data } = await this.$axios.post('login', this.loginFrom)
         console.log(data)
         if (data.meta.status !== 200) {
-          this.$message.error({ message: '用户名或密码错误' })
+          this.$message.error({ message: '该用户没有权限登录' })
         } else {
           this.$message({ message: data.meta.msg, type: 'success' })
           /*
