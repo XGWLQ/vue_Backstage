@@ -42,7 +42,7 @@ export default {
     return {
       // 用户登录数据
       loginFrom: {
-        username: 'admin',
+        username: 'wlq',
         password: '123456'
       },
       // 用户数据校验
