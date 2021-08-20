@@ -328,7 +328,7 @@ export default {
       const { data: res } = await this.$axios.get('users/' + id)
 
       // 获取用户失败
-      if (res.meta.status !== 200) { this.$message.error(res.meta.mes) }
+      if (res.meta.status !== 200) { return this.$message.error(res.meta.mes) }
 
       // 获取用户成功
       this.UpdataUserList = res.data
@@ -361,9 +361,7 @@ export default {
       }).catch(err => err)
       // 如果用户确认删除，则返回值为字符串 confirm
       // 如果用户取消了删除，则返回值为字符串 cancel
-      if (confirmId !== 'confirm') {
-        return this.$message.info('取消了删除！')
-      }
+      if (confirmId !== 'confirm') { return }
       const { data: res } = await this.$axios.delete('users/' + id)
       if (res.meta.status !== 200) { return this.$message.error('删除用户失败') }
 
