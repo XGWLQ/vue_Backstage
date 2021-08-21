@@ -1,6 +1,7 @@
 <template>
-  <div>
-    Welcome,我是吴礼钦
+  <div class="welcome">
+    <p>Welcome!</p>
+    <div>欢迎使用商城后台管理系统！</div>
   </div>
 </template>
 <script>
@@ -8,4 +9,11 @@ export default {
   name: 'Welcome'
 }
 </script>
-<style lang='stylus' rel='stylesheet/stylus'></style>
+<style Lang='less' scoped>
+.welcome {
+  margin: 150px auto;
+  text-align: center;
+  color: #6cf;
+  font-size: 24px;
+}
+</style>

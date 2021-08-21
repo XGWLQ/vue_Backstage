@@ -143,6 +143,9 @@ export default {
   color: #fff;
   font-size: 20px;
 }
+.el-header > div > img {
+  width: 55px;
+}
 .el-menu {
   border-right: none;
 }

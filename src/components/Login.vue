@@ -8,6 +8,7 @@
       </div>
       <!-- 登录框模块 -->
       <el-form :model="loginFrom"
+               @keyup.enter.native="login"
                :rules="loginFromRules"
                ref="loginFromRef"
                class="login_from">
@@ -22,6 +23,7 @@
           <el-input placeholder="请输入密码"
                     v-model="loginFrom.password"
                     type="password"
+                    show-password
                     prefix-icon="el-icon-lock"></el-input>
         </el-form-item>
         <!-- 按钮区域 -->
@@ -73,7 +75,7 @@ export default {
         const { data } = await this.$axios.post('login', this.loginFrom)
         console.log(data)
         if (data.meta.status !== 200) {
-          this.$message.error({ message: '该用户没有权限登录' })
+          this.$message.error(data.meta.msg)
         } else {
           this.$message({ message: data.meta.msg, type: 'success' })
           /*

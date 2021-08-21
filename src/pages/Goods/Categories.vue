@@ -188,7 +188,7 @@ export default {
           { required: true, message: '请输入分类名称', trigger: 'blur' }
         ]
       },
-      // 获取到的父级分类数据
+      // 获取到的数据源数据
       parClassIfyList: [],
       // 选择分类值的数据 id 值
       selectId: [],
@@ -231,7 +231,6 @@ export default {
     },
     // 选择多级选择框是触发这个函数
     parClassIfyChange () {
-      console.log(this.selectId)
       // 如果selectId 中有长度说明选中了父级分类
       if (this.selectId.length > 0) {
         // 父分类的id
@@ -254,7 +253,7 @@ export default {
         this.addClassIfyDialogVisible = !this.addClassIfyDialogVisible
       })
     },
-    // 清除添加分类表中的数据
+    // 关闭对话框时清除表中的校验数据
     addClassIfyDialogClose () {
       this.$refs.addClassIfyRolesRef.resetFields()
       // 因为关闭他时里面的数据就用不到了 所以复原
