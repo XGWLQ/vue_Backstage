@@ -104,7 +104,7 @@ export default {
       const { data: res } = await this.$axios.get('goods'
         , { params: this.queryInfo })
       if (res.meta.status !== 200) {
-        return this.$message.error(res.metamsg)
+        return this.$message.error(res.meta.msg)
       }
       this.goodslist = res.data.goods
       this.total = res.data.total

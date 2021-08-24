@@ -3,13 +3,14 @@ import VueRouter from 'vue-router'
 import Login from '../components/Login.vue'
 import Home from '../components/Home.vue'
 import Welcome from '../components/Welcome.vue'
-import User from '../pages/User.vue'
-import Rights from '../pages/Power/Rights.vue'
-import Roles from '../pages/Power/Roles.vue'
-import Categories from '../pages/Goods/Categories.vue'
-import Params from '../pages/Goods/Params.vue'
-import Goods from '../pages/Goods/Goods.vue'
-import addGoods from '../pages/Goods/addGoods.vue'
+const User = () => import('../pages/Power/Rights.vue')
+const Rights = () => import('../pages/Power/Roles.vue')
+const Roles = () => import('../pages/User.vue')
+const Categories = () => import('../pages/Goods/Categories.vue')
+const Params = () => import('../pages/Goods/Params.vue')
+const Goods = () => import('../pages/Goods/Goods.vue')
+const addGoods = () => import('../pages//Goods/addGoods.vue')
+const Orders = () => import('../pages/Orders.vue')
 
 Vue.use(VueRouter)
 
@@ -28,7 +29,8 @@ const routes = [
       { path: '/categories', component: Categories },
       { path: '/params', component: Params },
       { path: '/goods', component: Goods },
-      { path: '/goods/add', component: addGoods }
+      { path: '/goods/add', component: addGoods },
+      { path: '/orders', component: Orders }
     ]
   }
 
