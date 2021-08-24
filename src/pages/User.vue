@@ -225,7 +225,7 @@ export default {
       userInfo: { // 获取用户列表的参数对象
         query: '',
         pagenum: 1, // 当前页码
-        pagesize: 2 // 获取总的页面数
+        pagesize: 4 // 获取总的页面数
       },
       total: 0, // 总用户列表页
       showAddUserDialogVisible: false, // 用来控制添加用户对话框的显示隐藏

@@ -1,5 +1,5 @@
 <template>
-  <el-container class="home-container">
+  <el-container>
     <!-- 头部区 -->
     <el-header>
       <div>
@@ -124,7 +124,7 @@ export default {
 }
 </script>
 <style Lang='less' scoped>
-.home-container {
+.el-container {
   height: 100%;
 }
 /* 头部样式 */
@@ -155,6 +155,7 @@ export default {
 }
 .el-main {
   background-color: #edeaf1;
+  overflow: auto;
 }
 .toggle-button {
   background-color: #485161;
