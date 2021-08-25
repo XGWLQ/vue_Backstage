@@ -3,9 +3,9 @@ import VueRouter from 'vue-router'
 import Login from '../components/Login.vue'
 import Home from '../components/Home.vue'
 import Welcome from '../components/Welcome.vue'
-const User = () => import('../pages/Power/Rights.vue')
+const User = () => import('../pages/User.vue')
 const Rights = () => import('../pages/Power/Roles.vue')
-const Roles = () => import('../pages/User.vue')
+const Roles = () => import('../pages/Power/Rights.vue')
 const Categories = () => import('../pages/Goods/Categories.vue')
 const Params = () => import('../pages/Goods/Params.vue')
 const Goods = () => import('../pages/Goods/Goods.vue')
@@ -39,6 +39,8 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  base: '/',
+  mode: 'hash',
   routes
 })
 
